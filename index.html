@@ -54,14 +54,21 @@
           </script>
 
             <p> Write a table to the page </p>
-
+            <table><tr><td>first</td><td>second</td></tr></table>
+          <script>
+            document.writeln("<table>")
+            for(var i = 0; i<5; i++){
+              document.write("<table><tr><td>first</td><td>second</td></tr></table>")
+            }
+            document.write("<table>")
+          </script>
         </div>
 
         <div class="practice">
             <h1>Window and document object </h1>
             <p> Try alert, open, location, url </p>
             <script>
-
+              document.write(window.location.href)
             </script>
 
 
