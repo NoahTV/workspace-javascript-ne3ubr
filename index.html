@@ -207,9 +207,21 @@
             </p>
 
             <script type="text/javascript">
-
-
-
+              function getprice() {
+                var yearCar = document.getElementById('year').value;
+                var conditioncar = document.getElementById('condition').value;
+                console.log(yearCar+" "+conditioncar);
+                var price;
+                if (yearCar == "2003" && conditioncar == "Good") {
+                  price = 3500;
+                }
+                else if (yearCar == "2004" && conditioncar == "Fair") {
+                  price = 4500;
+                }
+                document.getElementById('price').textContent=price.toString();
+              }
+              document.getElementById('year').addEventListener('change',getprice);
+              document.getElementById('condition').addEventListener('change',getprice);
             </script>
 
         </div>
